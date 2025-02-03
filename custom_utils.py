@@ -4,7 +4,8 @@ from qiskit_aer import AerSimulator
 
 def create_circuit(qubits=1):
     circuit = QuantumCircuit(qubits)
-    circuit.rz(0, 0)
+    qubits_arr = [i for i in range(qubits)]
+    circuit.rz(0, qubits_arr)
     return circuit
 
 def run_simulation(circ):
